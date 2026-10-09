@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Biblioteca | Litoral Norte Sustentável</title>
+  <meta name="description" content="Biblioteca digital da Rede Litoral Norte Sustentável: relatórios, estudos e documentos sobre o desenvolvimento sustentável da região.">
+  <link rel="icon" href="assets/img/logo-trevo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/estilo.css">
+</head>
+<body>
+  <div data-topo></div>
+
+  <main id="conteudo">
+    <section class="pagina-topo">
+      <div class="container">
+        <p class="migalhas"><a href="index.html">Início</a> / Biblioteca</p>
+        <div class="selos selos-topo" data-ods-topo></div>
+        <h1>Biblioteca digital</h1>
+        <p class="lead">Relatórios, estudos, legislação e materiais de capacitação reunidos pela Rede sobre o Litoral Norte e a Agenda 2030.</p>
+      </div>
+    </section>
+
+    <section class="secao">
+      <div class="container">
+        <div class="cabeca-secao cabeca-linha">
+          <div>
+            <span class="sobretitulo">eBiblioteca</span>
+            <h2 class="titulo-secao">Acervo da Rede</h2>
+          </div>
+          <a class="botao botao-linha" href="https://docs.google.com/folderview?id=0Bxj_DPXWDwSBOVBsdGlrY1JMSjA&amp;resourcekey=0-ztknYqeXvesNU0G1Zdn69Q" target="_blank" rel="noopener">Abrir no Google Drive <span class="seta"></span></a>
+        </div>
+        <div class="moldura-embed">
+          <iframe src="https://drive.google.com/embeddedfolderview?id=0Bxj_DPXWDwSBOVBsdGlrY1JMSjA&amp;resourcekey=0-ztknYqeXvesNU0G1Zdn69Q#list" title="Acervo da eBiblioteca no Google Drive" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao secao-alt">
+      <div class="container">
+        <div class="cabeca-secao">
+          <span class="sobretitulo">Destaques</span>
+          <h2 class="titulo-secao">Documentos em destaque</h2>
+        </div>
+        <div class="grupos">
+          <article class="grupo">
+            <div class="grupo-topo"><div><h3>Territorialização dos ODS</h3><p class="grupo-fonte">Programa Petrobras e PNUD · Diagnóstico de indicadores ODS e RIA — Avaliação Rápida Integrada</p></div></div>
+            <div class="chips">
+              <a class="chip" href="https://drive.google.com/drive/folders/1gOsaRXbg31uRoHafpnbStqKbRShmVJr4" target="_blank" rel="noopener">Programa de capacitação (pasta geral)</a>
+              <a class="chip" href="https://drive.google.com/file/d/1nytraU4n_KBe03SOIyjY5vExU1OqD7_Q/view" target="_blank" rel="noopener">RIA atualizada em 2023</a>
+            </div>
+          </article>
+          <article class="grupo">
+            <div class="grupo-topo"><div><h3>Legislação</h3><p class="grupo-fonte">Ilhabela</p></div></div>
+            <div class="chips">
+              <a class="chip" href="https://cespro.com.br/visualizarDiploma.php?cdMunicipio=8969&amp;cdDiploma=20201452&amp;NroLei=1.452&amp;Word=&amp;Word2=" target="_blank" rel="noopener">Lei nº 1.452/2020 — adota a Agenda 2030 no município</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-rodape></div>
+
+  <script src="assets/js/dados.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script>
+    document.querySelector("[data-ods-topo]").innerHTML =
+      window.LNS.ui.selosODS([4, 17], 64).replace(/^<div class="selos">|<\/div>$/g, "");
+  </script>
+</body>
+</html>

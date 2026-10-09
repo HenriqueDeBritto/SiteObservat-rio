@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Observatório do Desenvolvimento Sustentável | Litoral Norte Sustentável</title>
+  <meta name="description" content="Dados e indicadores dos municípios do Litoral Norte de São Paulo organizados pelos Objetivos de Desenvolvimento Sustentável (ODS).">
+  <link rel="icon" href="assets/img/logo-trevo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/estilo.css">
+</head>
+<body>
+  <div data-topo></div>
+
+  <main id="conteudo">
+    <section class="pagina-topo">
+      <div class="container">
+        <p class="migalhas"><a href="index.html">Início</a> / Observatório</p>
+        <span class="sobretitulo">Observatório do Desenvolvimento Sustentável</span>
+        <h1>Dados do Litoral Norte, organizados pelos ODS</h1>
+        <div class="prosa">
+          <p class="lead">O Observatório é uma iniciativa do Instituto Ilhabela Sustentável em parceria com a Rede Litoral Norte Sustentável. Reúne dados e indicadores que permitem acompanhar as políticas públicas e a qualidade de vida em Caraguatatuba, Ilhabela, São Sebastião e Ubatuba, promovendo a transparência, o acesso à informação e a educação cidadã.</p>
+          <p class="lead">Posteriormente foram acrescentadas análises de eficiência em políticas públicas, objeto da dissertação de mestrado do responsável, Carlos Nunes.</p>
+        </div>
+      </div>
+    </section>
+
+    <nav class="nav-temas" aria-label="Temas do Observatório">
+      <div class="container nav-temas-lista" data-nav-temas></div>
+    </nav>
+
+    <div class="container" data-temas></div>
+
+    <section class="secao secao-alt" id="pesquisas" aria-labelledby="t-pesquisas">
+      <div class="container">
+        <div class="cabeca-secao">
+          <span class="sobretitulo">Pesquisas e projetos</span>
+          <h2 class="titulo-secao" id="t-pesquisas">Pesquisas e projetos de interesse</h2>
+        </div>
+
+        <div class="grupos">
+          <article class="grupo" style="--cor:var(--ods-17)">
+            <div class="grupo-topo"><div><h3>Territorialização dos ODS</h3><p class="grupo-fonte">Petrobras e PNUD · atualização 2023: Instituto Ilhabela Sustentável, com apoio do IDIS</p></div></div>
+            <p class="grupo-desc">O programa “Territorialização dos Objetivos de Desenvolvimento Sustentável”, parceria entre a Petrobras e o PNUD, abrangeu os municípios afetados pelas operações da empresa e produziu dois relatórios: o <strong>Diagnóstico situacional de indicadores ODS</strong> e a <strong>RIA — Avaliação Rápida Integrada</strong>, que avalia o alinhamento dos Planos Plurianuais (PPA) municipais aos 17 ODS. Em 2023, o Instituto Ilhabela Sustentável atualizou a RIA com apoio financeiro do IDIS.</p>
+            <div class="chips">
+              <a class="chip" href="https://drive.google.com/drive/folders/1gOsaRXbg31uRoHafpnbStqKbRShmVJr4" target="_blank" rel="noopener">Relatórios do programa (Google Drive)</a>
+              <a class="chip" href="https://drive.google.com/file/d/1nytraU4n_KBe03SOIyjY5vExU1OqD7_Q/view" target="_blank" rel="noopener">RIA atualizada (2023)</a>
+            </div>
+          </article>
+
+          <article class="grupo" style="--cor:var(--ods-11)">
+            <div class="grupo-topo"><div><h3>IDSC-BR — Índice de Desenvolvimento Sustentável das Cidades</h3><p class="grupo-fonte">Instituto Cidades Sustentáveis e SDSN (Rede de Soluções para o Desenvolvimento Sustentável da ONU)</p></div></div>
+            <p class="grupo-desc">O IDSC-BR mede a distância de cada município brasileiro em relação às metas dos ODS, com 100 indicadores de fontes públicas e oficiais. Lançado em 2021 com 770 cidades, hoje cobre os 5.570 municípios do país — incluindo os quatro do Litoral Norte.</p>
+            <div class="chips">
+              <a class="chip" href="#cidades">Ver resultados por município →</a>
+              <a class="chip" href="https://idsc.cidadessustentaveis.org.br/" target="_blank" rel="noopener">Site do IDSC-BR</a>
+              <a class="chip" href="https://www.unsdsn.org/" target="_blank" rel="noopener">UN SDSN</a>
+            </div>
+          </article>
+
+          <article class="grupo" style="--cor:var(--ods-16)">
+            <div class="grupo-topo"><div><h3>Pesquisa de Percepção Cidadã — Ilhabela (2019)</h3><p class="grupo-fonte">Observatório · Tableau Public</p></div><span class="etiqueta etiqueta-tableau">Painel</span></div>
+            <div class="chips">
+              <a class="chip" href="https://public.tableau.com/views/I-Observatorio_ODS_2030_Indicadores/PesquisadePercepoCidad2019Story" data-tableau="Pesquisa de Percepção Cidadã — Ilhabela (2019)">Abrir pesquisa</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao" aria-labelledby="t-parceiros">
+      <div class="container">
+        <div class="cabeca-secao">
+          <span class="sobretitulo">Quem faz</span>
+          <h2 class="titulo-secao" id="t-parceiros">Parceiros</h2>
+        </div>
+        <div class="parceiros">
+          <div class="parceiro"><img src="assets/img/parceiros/instituto-ilhabela-sustentavel.png" alt="Instituto Ilhabela Sustentável" loading="lazy"></div>
+          <div class="parceiro"><img src="assets/img/logo-rede-trevo-nomes-512.png" alt="Rede Litoral Norte Sustentável" loading="lazy" class="parceiro-trevo"></div>
+          <div class="parceiro"><img src="assets/img/parceiros/fatec-sao-sebastiao.png" alt="Fatec São Sebastião" loading="lazy"></div>
+          <div class="parceiro"><img src="assets/img/parceiros/federacao-pro-costa-atlantica.jpg" alt="Federação Pró-Costa Atlântica" loading="lazy"></div>
+        </div>
+        <p class="mt-32">Contato/email: <a href="mailto:observatorio@litoralnortesustentavel.org.br">observatorio@litoralnortesustentavel.org.br</a></p>
+      </div>
+    </section>
+  </main>
+
+  <div data-rodape></div>
+
+  <script src="assets/js/dados.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/observatorio.js"></script>
+</body>
+</html>

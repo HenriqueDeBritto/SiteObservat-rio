@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agenda da Rede | Litoral Norte Sustentável</title>
+  <meta name="description" content="Reuniões, eventos e atividades da Rede Litoral Norte Sustentável.">
+  <link rel="icon" href="assets/img/logo-trevo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/estilo.css">
+</head>
+<body>
+  <div data-topo></div>
+
+  <main id="conteudo">
+    <section class="pagina-topo">
+      <div class="container">
+        <p class="migalhas"><a href="index.html">Início</a> / Agenda</p>
+        <div class="selos selos-topo" data-ods-topo></div>
+        <h1>Agenda da Rede</h1>
+        <p class="lead">Reuniões, encontros, audiências públicas e eventos sobre o desenvolvimento sustentável do Litoral Norte.</p>
+      </div>
+    </section>
+
+    <section class="secao">
+      <div class="container">
+        <div class="moldura-embed moldura-agenda">
+          <iframe src="https://calendar.google.com/calendar/embed?src=3hgncf4s9e0jklt2hlepnse7tg%40group.calendar.google.com&amp;ctz=America%2FSao_Paulo&amp;mode=AGENDA&amp;hl=pt_BR&amp;showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0" title="Agenda da Rede Litoral Norte Sustentável (Google Agenda)" loading="lazy"></iframe>
+        </div>
+        <p class="fonte-dados">
+          <a href="https://calendar.google.com/calendar/u/0?cid=M2hnbmNmNHM5ZTBqa2x0MmhsZXBuc2U3dGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ" target="_blank" rel="noopener">Adicionar esta agenda ao seu Google Agenda</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <div data-rodape></div>
+
+  <script src="assets/js/dados.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script>
+    document.querySelector("[data-ods-topo]").innerHTML =
+      window.LNS.ui.selosODS([17], 64).replace(/^<div class="selos">|<\/div>$/g, "");
+  </script>
+</body>
+</html>

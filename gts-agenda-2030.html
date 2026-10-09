@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GTs Agenda 2030 | Litoral Norte Sustentável</title>
+  <meta name="description" content="Grupos de Trabalho da Agenda 2030 e dos ODS no Litoral Norte: integrantes, projetos e como participar.">
+  <link rel="icon" href="assets/img/logo-trevo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/estilo.css">
+</head>
+<body>
+  <div data-topo></div>
+
+  <main id="conteudo">
+    <section class="pagina-topo">
+      <div class="container">
+        <p class="migalhas"><a href="index.html">Início</a> / GTs Agenda 2030</p>
+        <div class="selos selos-topo" data-ods-topo></div>
+        <h1>Grupos de Trabalho da Agenda 2030</h1>
+        <p class="lead">Os GTs reúnem voluntários que transformam os Objetivos de Desenvolvimento Sustentável em projetos concretos no território.</p>
+      </div>
+    </section>
+
+    <section class="secao">
+      <div class="container destaque destaque-topo">
+        <div>
+          <span class="sobretitulo">GT Agenda 2030 / ODS Ilhabela</span>
+          <h2 class="titulo-secao">Integrantes</h2>
+          <ul class="lista-pessoas">
+            <li><strong>Carlos Nunes</strong> <span>coordenador</span></li>
+            <li><strong>Natalie Cardoso</strong> <span>coordenadora</span></li>
+            <li><strong>Gilda Nunes</strong></li>
+            <li><strong>Alice Penna</strong></li>
+            <li><strong>João Carlos</strong></li>
+            <li><strong>Gabriela Carvalho</strong></li>
+            <li><strong>Monique Tayla</strong></li>
+            <li><strong>Tiago Reis</strong></li>
+            <li><strong>Simone Brasil</strong></li>
+          </ul>
+        </div>
+        <div class="cartao-participe">
+          <h3>Participe do GT</h3>
+          <p>O grupo é aberto a quem quiser contribuir com a Agenda 2030 em Ilhabela.</p>
+          <a class="botao botao-primario" href="https://chat.whatsapp.com/HFIEaOZf3E9GV7No7iwc4p" target="_blank" rel="noopener">Entrar no grupo do WhatsApp <span class="seta"></span></a>
+          <div class="chips">
+            <a class="chip" href="https://drive.google.com/drive/folders/1frKIX7OaeiNEfh_rXPr2LG7WgoSCemwC" target="_blank" rel="noopener">Pasta do GT Agenda 2030/ODS Ilhabela</a>
+            <a class="chip" href="https://drive.google.com/drive/folders/1HtDLyvqurOeFrudjZmWkVqTn092VZswc" target="_blank" rel="noopener">Documentos do GT</a>
+            <a class="chip" href="https://drive.google.com/drive/folders/1gOsaRXbg31uRoHafpnbStqKbRShmVJr4" target="_blank" rel="noopener">Pasta geral (cópia PNUD)</a>
+            <a class="chip" href="https://cespro.com.br/visualizarDiploma.php?cdMunicipio=8969&amp;cdDiploma=20201452&amp;NroLei=1.452&amp;Word=&amp;Word2=" target="_blank" rel="noopener">Lei nº 1.452/2020 — Agenda 2030 em Ilhabela</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao secao-alt">
+      <div class="container">
+        <div class="cabeca-secao">
+          <span class="sobretitulo">Projetos propostos</span>
+          <h2 class="titulo-secao">O que o GT está construindo</h2>
+        </div>
+        <div class="temas" data-projetos></div>
+      </div>
+    </section>
+  </main>
+
+  <div data-rodape></div>
+
+  <script src="assets/js/dados.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script>
+    (function () {
+      const { esc, selosODS } = window.LNS.ui;
+      const PROJETOS = [
+        { titulo: "Comissão Municipal para o Desenvolvimento Sustentável", desc: "Institucionalização da Comissão Municipal da Agenda 2030 de Ilhabela.", ods: [16, 17], equipe: "Natalie Cardoso e Alice Penna (coordenadoras)" },
+        { titulo: "Observando os Rios de Ilhabela", desc: "Monitoramento cidadão da qualidade da água dos rios do arquipélago.", ods: [6, 14], equipe: "Gilda Nunes e João Carlos (coordenadores)" },
+        { titulo: "Observatório dos ODS", desc: "Plataforma de dados e indicadores para acompanhar as políticas públicas da região.", ods: [16, 17], equipe: "Carlos Nunes e Jorge Guaracy (coordenadores)", link: "observatorio.html" },
+        { titulo: "Selo ODS Ilhabela", desc: "Reconhecimento de iniciativas alinhadas aos Objetivos de Desenvolvimento Sustentável.", ods: [12, 17], equipe: "Gilda Nunes e Natalie Cardoso (coordenadoras), com Simone Brasil, Monique Tayla, Edson Lobato e Carlos Nunes" },
+        { titulo: "De Tampinha em Tampinha a Cidade Será Minha", desc: "Mobilização para a coleta e reciclagem de tampinhas plásticas.", ods: [12, 11], equipe: "João Carlos Pereira (coordenador)" },
+        { titulo: "Plano Diretor e os ODS", desc: "Análise da conformidade da Lei do Plano Diretor aos Objetivos de Desenvolvimento Sustentável.", ods: [11, 16], equipe: "Jorge Guaracy (coordenador) e Carlos Nunes" },
+      ];
+      document.querySelector("[data-ods-topo]").innerHTML = selosODS([17, 11, 16], 64).replace(/^<div class="selos">|<\/div>$/g, "");
+      document.querySelector("[data-projetos]").innerHTML = PROJETOS.map((p) => {
+        const corpo = selosODS(p.ods, 44) + "<h3>" + esc(p.titulo) + "</h3><p>" + esc(p.desc) + "</p>" +
+          '<p class="equipe"><strong>Equipe:</strong> ' + esc(p.equipe) + "</p>";
+        return p.link
+          ? '<a class="tema" href="' + p.link + '" style="--cor:var(--ods-' + p.ods[0] + ')">' + corpo + '<span class="seta">Ver o Observatório </span></a>'
+          : '<div class="tema tema-estatico" style="--cor:var(--ods-' + p.ods[0] + ')">' + corpo + "</div>";
+      }).join("");
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mapas | Litoral Norte Sustentável</title>
+  <meta name="description" content="Mapas interativos do Litoral Norte de São Paulo: saneamento, áreas de risco, turismo, unidades de conservação e monitoramento climático.">
+  <link rel="icon" href="assets/img/logo-trevo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/estilo.css">
+</head>
+<body>
+  <div data-topo></div>
+
+  <main id="conteudo">
+    <section class="pagina-topo">
+      <div class="container">
+        <p class="migalhas"><a href="index.html">Início</a> / Mapas</p>
+        <div class="selos selos-topo" data-ods-topo></div>
+        <h1>Mapas do Litoral Norte</h1>
+        <p class="lead">Mapas interativos produzidos pela Rede e por parceiros sobre saneamento, riscos, turismo, áreas protegidas e clima. Clique para abrir o mapa aqui mesmo.</p>
+      </div>
+    </section>
+
+    <section class="secao">
+      <div class="container">
+        <div class="temas" data-mapas></div>
+      </div>
+    </section>
+  </main>
+
+  <div data-rodape></div>
+
+  <script src="assets/js/dados.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script>
+    (function () {
+      const { esc, selosODS, icone } = window.LNS.ui;
+      // tipo "mapa": Google My Maps (abre no visualizador) · "site": abre em nova aba
+      // restrito: mapa privado no Google — o dono precisa liberar "qualquer pessoa com o link"
+      const MAPAS = [
+        { titulo: "Mapa do Saneamento no Litoral Norte", desc: "Situação do saneamento nos quatro municípios do Litoral Norte.", ods: [6, 14], url: "https://www.google.com/maps/d/viewer?mid=1dgK12gr_bG9MLdg9Mj_MU2kRTMeS7iI", tipo: "mapa" },
+        { titulo: "Áreas de Risco de Ilhabela", desc: "Áreas de risco mapeadas no município.", ods: [11, 13], url: "https://www.google.com/maps/d/viewer?mid=1lsZ58BSpt0OE5FGgG-3CwVjLYt4t2kU", tipo: "mapa" },
+        { titulo: "Atrativos Turísticos de Ilhabela", desc: "Pontos turísticos do arquipélago de Ilhabela.", ods: [8, 12], url: "https://www.google.com/maps/d/viewer?mid=1y1M58nO7sF56yiMyReIMrWzLdA93kHHe", tipo: "mapa" },
+        { titulo: "Ocorrências do Conselho Tutelar — Ilhabela", desc: "Distribuição das ocorrências registradas pelo Conselho Tutelar.", ods: [16, 10], url: "https://www.google.com/maps/d/viewer?mid=159mzQoerRFgveO6FEjnP1PyNR4U", tipo: "mapa" },
+        { titulo: "Plano Diretor de Ilhabela", desc: "Mapa do Plano Diretor do município.", ods: [11], url: "https://www.google.com/maps/d/viewer?mid=1lLcl6XAM6sn6xNv-jtgB8Y-ycQ4", tipo: "mapa", restrito: true },
+        { titulo: "APA Marinha do Litoral Norte", desc: "Área de Proteção Ambiental Marinha do Litoral Norte.", ods: [14], url: "https://www.google.com/maps/d/viewer?mid=1KUSfamjDnD_3IrImV0CrdvZ75nrNaFxd", tipo: "mapa", restrito: true },
+        { titulo: "GeoPIX — Prefeitura de Ilhabela", desc: "Sistema de informações geográficas oficial do município.", ods: [11, 16], url: "https://ilhabela.geopx.com.br/geopixelcidades3/", tipo: "site" },
+        { titulo: "Mapa Interativo do CEMADEN", desc: "Estações meteorológicas, pluviômetros e alertas de desastres naturais.", ods: [13, 11], url: "https://mapainterativo.cemaden.gov.br/", tipo: "site" },
+      ];
+
+      document.querySelector("[data-ods-topo]").innerHTML = selosODS([11, 13, 14, 15], 64).replace(/^<div class="selos">|<\/div>$/g, "");
+
+      document.querySelector("[data-mapas]").innerHTML = MAPAS.map((m) => {
+        const cor = "var(--ods-" + m.ods[0] + ")";
+        const corpo = selosODS(m.ods, 44) + "<h3>" + esc(m.titulo) + "</h3><p>" + esc(m.desc) + "</p>";
+        if (m.restrito) {
+          return '<div class="tema tema-inativo" style="--cor:' + cor + '">' + corpo +
+            '<span class="etiqueta">Acesso restrito — aguardando liberação pública</span></div>';
+        }
+        const attrs = m.tipo === "mapa"
+          ? ' href="' + esc(m.url) + '" data-mapa="' + esc(m.titulo) + '"'
+          : ' href="' + esc(m.url) + '" target="_blank" rel="noopener"';
+        return '<a class="tema" style="--cor:' + cor + '"' + attrs + ">" + corpo +
+          '<span class="seta">' + (m.tipo === "mapa" ? "Abrir mapa " : "Abrir site externo ") + "</span></a>";
+      }).join("");
+    })();
+  </script>
+</body>
+</html>

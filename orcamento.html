@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orçamento Público Municipal | Litoral Norte Sustentável</title>
+  <meta name="description" content="Receitas e despesas das prefeituras de Caraguatatuba, Ilhabela, São Sebastião e Ubatuba com dados oficiais do Tesouro Nacional (SICONFI), relacionadas aos ODS.">
+  <link rel="icon" href="assets/img/logo-trevo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/estilo.css">
+</head>
+<body>
+  <div data-topo></div>
+
+  <main id="conteudo">
+    <section class="pagina-topo">
+      <div class="container">
+        <p class="migalhas"><a href="index.html">Início</a> / <a href="observatorio.html">Observatório</a> / Orçamento</p>
+        <div class="selos selos-topo" data-ods-topo></div>
+        <h1>Orçamento Público Municipal</h1>
+        <p class="lead">De onde vem e para onde vai o dinheiro das prefeituras do Litoral Norte. Dados oficiais declarados pelos municípios ao Tesouro Nacional, consultados automaticamente e relacionados aos Objetivos de Desenvolvimento Sustentável.</p>
+      </div>
+    </section>
+
+    <!-- Filtros -->
+    <div class="filtros-barra">
+      <div class="container filtros">
+        <div class="filtro">
+          <span class="filtro-rotulo" id="rot-municipio">Município</span>
+          <div class="segmentado" role="radiogroup" aria-labelledby="rot-municipio" data-municipios></div>
+        </div>
+        <label class="filtro">
+          <span class="filtro-rotulo">Ano</span>
+          <select class="seletor" data-ano></select>
+        </label>
+      </div>
+    </div>
+
+    <section class="secao" aria-live="polite">
+      <div class="container">
+        <div class="aviso" data-aviso hidden></div>
+
+        <div class="kpis" data-kpis>
+          <div class="kpi esqueleto"></div><div class="kpi esqueleto"></div><div class="kpi esqueleto"></div><div class="kpi esqueleto"></div>
+        </div>
+
+        <div class="duas-colunas mt-32">
+          <article class="cartao-grafico">
+            <header>
+              <h2>Para onde vai o dinheiro</h2>
+              <p>Despesas liquidadas por área de governo e os ODS relacionados a cada área.</p>
+            </header>
+            <div class="barras" data-despesas><p class="carregando">Consultando o Tesouro Nacional…</p></div>
+          </article>
+          <article class="cartao-grafico">
+            <header>
+              <h2>De onde vem o dinheiro</h2>
+              <p>Receitas brutas realizadas, por origem.</p>
+            </header>
+            <div class="barras" data-receitas><p class="carregando">Consultando o Tesouro Nacional…</p></div>
+          </article>
+        </div>
+        <p class="fonte-dados" data-fonte></p>
+      </div>
+    </section>
+
+    <section class="secao secao-alt" aria-labelledby="t-comparacao">
+      <div class="container">
+        <div class="cabeca-secao">
+          <span class="sobretitulo">Comparação regional</span>
+          <h2 class="titulo-secao" id="t-comparacao">Os quatro municípios lado a lado</h2>
+          <p class="lead">Gasto por habitante em áreas ligadas aos ODS e o peso dos royalties de petróleo na receita, no ano selecionado.</p>
+        </div>
+        <div class="tabela-rolagem">
+          <table class="tabela-comparacao" data-comparacao>
+            <caption class="visualmente-oculto">Comparação de despesas por habitante entre os municípios do Litoral Norte</caption>
+            <tbody><tr><td class="carregando">Consultando o Tesouro Nacional…</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao" aria-labelledby="t-paineis">
+      <div class="container">
+        <div class="cabeca-secao">
+          <span class="sobretitulo">Análises do Observatório</span>
+          <h2 class="titulo-secao" id="t-paineis">Painéis e fontes complementares</h2>
+        </div>
+        <div class="grupos">
+          <article class="grupo">
+            <div class="grupo-topo"><div><h3>Painéis de orçamento do Observatório</h3><p class="grupo-fonte">Tableau Public · dados do Portal da Transparência Municipal (TCE-SP)</p></div><span class="etiqueta etiqueta-tableau">Painel</span></div>
+            <div class="chips">
+              <a class="chip" href="https://public.tableau.com/views/OrcamentoLN/Orc4MunicipiosLN" data-tableau="Comparação dos orçamentos do Litoral Norte">Comparação dos 4 municípios</a>
+              <a class="chip" href="https://public.tableau.com/views/OrcamentoLN/menu?Municipio=Ilhabela" data-tableau="Orçamento — Ilhabela">Ilhabela (detalhado)</a>
+              <a class="chip" href="https://public.tableau.com/views/OrcamentoLN_17608037325790/menu?Municipio=S%C3%A3o%20Sebasti%C3%A3o" data-tableau="Orçamento — São Sebastião">São Sebastião (detalhado)</a>
+              <a class="chip" href="https://public.tableau.com/views/dissertacaoUSP/Receitas_RMVale" data-tableau="Orçamentos municipais da RMVale">Orçamentos da RMVale</a>
+            </div>
+          </article>
+          <article class="grupo">
+            <div class="grupo-topo"><div><h3>Observatório Fiscal do TCE-SP</h3><p class="grupo-fonte">Execução orçamentária, aplicação em saúde e educação e alertas do Tribunal de Contas</p></div><span class="etiqueta etiqueta-oficial">Dado oficial</span></div>
+            <div class="chips" data-tce></div>
+          </article>
+          <article class="grupo">
+            <div class="grupo-topo"><div><h3>Portais de transparência</h3><p class="grupo-fonte">Pagamentos, fornecedores e receitas mês a mês</p></div><span class="etiqueta etiqueta-oficial">Dado oficial</span></div>
+            <div class="chips">
+              <a class="chip" href="https://transparencia.tce.sp.gov.br/" target="_blank" rel="noopener">Portal da Transparência Municipal (TCE-SP)</a>
+              <a class="chip" href="https://siconfi.tesouro.gov.br/" target="_blank" rel="noopener">SICONFI — Tesouro Nacional</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-rodape></div>
+  <div class="dica" role="tooltip" data-dica hidden></div>
+
+  <script src="assets/js/dados.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/orcamento.js"></script>
+</body>
+</html>
