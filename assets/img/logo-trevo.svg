@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -50 100 100" role="img" aria-label="Trevo da Rede Litoral Norte Sustentável">
+  <defs>
+    <!-- Folha em forma de coração com a ponta no centro do trevo -->
+    <path id="folha" d="M0 -3 C-3 -11 -21 -14 -21 -29 C-21 -40 -7 -44 0 -33 C7 -44 21 -40 21 -29 C21 -14 3 -11 0 -3 Z"/>
+    <clipPath id="folhas">
+      <use href="#folha" transform="rotate(-45)"/>
+      <use href="#folha" transform="rotate(45)"/>
+      <use href="#folha" transform="rotate(135)"/>
+      <use href="#folha" transform="rotate(225)"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#folhas)">
+    <rect x="-50" y="-50" width="100" height="100" fill="#8DC63F"/>
+    <circle r="33" fill="#5BAA46"/>
+    <circle r="22" fill="#1E7B3A"/>
+  </g>
+</svg>
